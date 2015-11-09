@@ -25,7 +25,8 @@ do_install () {
 			${D}${sysconfdir}/network/if-down.d \
 			${D}${sysconfdir}/network/if-post-down.d
 	install -m 0755 ${WORKDIR}/init ${D}${sysconfdir}/init.d/networking
-	install -m 0644 ${WORKDIR}/interfaces ${D}${sysconfdir}/network/interfaces
+	# conflicts with danny where netbase installs this file
+	#install -m 0644 ${WORKDIR}/interfaces ${D}${sysconfdir}/network/interfaces
 	install -m 0755 ${WORKDIR}/nfsroot ${D}${sysconfdir}/network/if-pre-up.d
 }
 
