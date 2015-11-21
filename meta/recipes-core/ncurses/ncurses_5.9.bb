@@ -2,6 +2,9 @@ require ncurses.inc
 
 PR = "${INC_PR}.1"
 
+# needed for gcc 5.xx
+CPPFLAGS_append = " -P"
+
 SRC_URI += "file://tic-hang.patch \
             file://config.cache \
 "
