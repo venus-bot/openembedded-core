@@ -17,7 +17,7 @@
 # about this. So we mount "proc" filesystems without -v.
 #
 test "$VERBOSE" != no && echo "Mounting local filesystems..."
-mount -at nonfs,nosmbfs,noncpfs 2>/dev/null
+mount -at nonfs,nosmbfs,noncpfs
 
 #
 # We might have mounted something over /dev, see if /dev/initctl is there.
